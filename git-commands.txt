@@ -1,0 +1,142 @@
+
+download git 
+url : https://git-scm.com/downloads
+
+
+
+1.How to config your name name email in git?
+(open git bash and type)
+
+git config --global user.name "kritika sen"
+git config --global user.email "kritika234@gmail.com"
+
+[ use you own name and email id ]
+[Note: after installing git you can configure your name and email id by using this following command.]
+
+2.how to check if your name and email id is configured properly or not ?
+(type on git bash)
+
+git config --global user.name
+git config --global user.email
+
+[it will display your name and email id ]
+
+
+3.how to see the status?
+(type on git bash) 
+
+git status
+
+4.how to add all files in git?
+
+-> open cmd/ git bash
+->go to your project folder directory that you want to upload on git
+-> git add .  
+or
+-> git add -A
+(it will upload all the files of that current folder)
+
+
+5. How to commit files in git ?
+-> git commit -m "first commit" 
+
+6.how to check your previous commit of a specific file?
+->git checkout file1.txt
+
+[note: After commit somehow if the file1.txt content gets deleted or modified than if we want to revart back the previous commited content than we have to use this checkout command]
+
+7.how to display / check all commits in my repository?
+->git log
+
+[it will all the commit statement and file details]
+
+8.how to display / check only previous commits in my repository?
+->git log -p -l
+
+9.how to delete files from  staging area?
+-> git rm --cached file2.txt
+
+
+(it will send the file2.txt un Untracked stage)
+
+
+9.how to delete files from  staging area?
+-> git rm file2.txt
+
+
+10.how to check branch names?
+-> git branch
+
+11.how to create new branch ?
+-> git branch <branch name>          [ ex-git branch dev ]
+
+or
+
+git push -u origin dev [Note : this -u origin will works after connecting to remote repo]
+
+12.forcefully commit without using git add i.e the file is not added in staging area?
+-> git commit -a -m "this file is forcefully updated"
+
+13.How to switch branches?
+-> git checkout dev 
+or
+-> git checkout master
+
+[ use your own branch name instead of dev]
+
+14.how to merge you branche with master branch?
+go to master branch (->git checkout master)
+->git merge dev
+
+15. gir remove -v : it will show  the repo url from where it will fetch and where to push
+16.how to clone repo from github ?
+->git clone <repo url>					[Ex:-git clone https://github.com/project1]
+
+17.
+
+Untracked : Initializing git using 'git init' command and deploy one newfile.txt and check 'git status' it will show you 'Untrack files: ' name . this is basically Untracked state
+Staged : If we want to send our file from Untrack to staging area than we have to add that newfile.txt in git ( git command : git add newfile.txt). After that the newfile.txt will be in staging area
+Unmodified : After commit it will change from staged area to unmodified area ( git command : git commit -am "first commit")
+Modified : After commit if we want to edit that commited file than it will be on Modified Stage
+
+
+
+18. How to compare staging area to your last commit ?
+-> git diff --staged                 
+
+19. After modifying previous commited file .If you want to match your current modified working directory to last commit : git checkout -f
+
+20.How to connect your local repository with remote repository and push from local repo to remote repo?
+
+create a remote repository on github.com
+git remote add origin https://github.com/project1    [Note : origin is the alias name of that url , for check use these commands-> 'git remote' ,' git remote -v' ]
+git push origin master   [Note: initially it will show repository not found, because we have to enable read write access in our github repo, for that enable ssh and GPG keys]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
